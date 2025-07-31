@@ -18,12 +18,13 @@ export default function LoginPage() {
     const { error } = await supabase.auth.signInWithOtp({
       email,
       options: {
-       emailRedirectTo: `${window.location.origin}/dashboard`, // FIXED: use template string
+      emailRedirectTo: 'https://recipe-generator-web-app.vercel.app/dashboard', // FIXED: use template string
   },
       
     });
 
     if (error) {
+
       setMessage('❌ Error: ' + error.message);
     } else {
       setMessage(
