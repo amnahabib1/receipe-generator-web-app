@@ -16,12 +16,12 @@ export default function LoginPage() {
   const handleLogin = async (e) => {
     e.preventDefault();
     const { error } = await supabase.auth.signInWithOtp({
-      email,
-      options: {
-      emailRedirectTo: 'https://receipe-generator-web-app-83xp-lrk91pmv0-amnahabib1s-projects.vercel.app/dashboard'
-,
-      },
-    });
+  email,
+  options: {
+    emailRedirectTo: 'https://receipe-generator-web-app-fhnr.vercel.app/dashboard',
+  },
+});
+
 
     if (error) {
 
