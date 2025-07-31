@@ -18,7 +18,8 @@ export default function LoginPage() {
     const { error } = await supabase.auth.signInWithOtp({
       email,
       options: {
-        emailRedirectTo: `${window.location.origin}/dashboard`,
+      emailRedirectTo: 'https://receipe-generator-web-app-83xp-lrk91pmv0-amnahabib1s-projects.vercel.app/dashboard'
+,
       },
     });
 
